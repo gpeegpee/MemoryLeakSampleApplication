@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/PostDelayWithoutAccessTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[postDelayed without outer access]"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/postDelay"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:enabled="true"
+            android:text="postDelay"
+            />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/MessengerActivityTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[messenger activity test]"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/messengerActivity"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:enabled="true"
+            android:text="Start messenger activity"
+            />
+    </LinearLayout>
+</LinearLayout>
