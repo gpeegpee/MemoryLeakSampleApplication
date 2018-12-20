@@ -5,7 +5,7 @@
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <TextView
         android:id="@+id/PostDelayWithoutAccessTextView"
@@ -56,4 +56,54 @@
             android:text="Start messenger activity"
             />
     </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/threadTestActivityTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[Thread test activity]"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/threadTestActivity"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:enabled="true"
+            android:text="Start ThreadTestActivity"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ExecutorTestTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[Executor Test Activity]"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ExecutorTestActivityButton"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:enabled="true"
+            android:text="Start ExecutorTestActivity"
+            />
+    </LinearLayout>
+
 </LinearLayout>

@@ -1,24 +1,16 @@
-package samsung.com.memoryleaktestapplication;
+package samsung.com.memoryleaktestapplication.activity;
 
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
-import android.content.ServiceConnection;
-import android.os.Handler;
-import android.os.IBinder;
-import android.os.Message;
-import android.os.Messenger;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import java.lang.ref.WeakReference;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import samsung.com.memoryleaktestapplication.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +21,12 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.messengerActivity)
     Button launchMessengerActivity;
+
+    @BindView(R.id.threadTestActivity)
+    Button launchThreadTestActivity;
+
+    @BindView(R.id.ExecutorTestActivityButton)
+    Button launchExecutorTestActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,14 +63,28 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onlaunchPostDelayButtonClicked");
         // start activity
 
-        Intent intent = new Intent(getApplicationContext(), TestActivity.class);
+        Intent intent = new Intent(getApplicationContext(), HandlerTestActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.messengerActivity)
     public void onlaunchMessengerActivityButtonClicked(View view) {
         Log.d(TAG, "onlaunchMessengerActivityButtonClicked");
-        Intent intent = new Intent(getApplicationContext(), TestActivityWithMessenger.class);
+        Intent intent = new Intent(getApplicationContext(), HandlerTestActivityWithMessenger.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.threadTestActivity)
+    public void onlaunchThreadTestActivityButtonClicked(View view) {
+        Log.d(TAG, "onlaunchThreadTestActivityButtonClicked");
+        Intent intent = new Intent(getApplicationContext(), ThreadTestActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.ExecutorTestActivityButton)
+    public void onlaunchExecutorTestActivityButtonClicked(View view) {
+        Log.d(TAG, "onlaunchExecutorTestActivityButtonClicked");
+        Intent intent = new Intent(getApplicationContext(), ExecutorServiceTestActivity.class);
         startActivity(intent);
     }
 

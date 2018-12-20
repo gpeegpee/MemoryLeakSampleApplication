@@ -4,6 +4,9 @@ import android.util.Log;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
+import samsung.com.memoryleaktestapplication.util.ClearableManager;
+import samsung.com.memoryleaktestapplication.util.DefaultClearableManager;
 public enum TestConstant {
 
     PLAY(1),

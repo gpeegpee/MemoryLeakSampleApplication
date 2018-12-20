@@ -1,4 +1,4 @@
-package samsung.com.memoryleaktestapplication;
+package samsung.com.memoryleaktestapplication.activity;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -18,13 +18,14 @@ import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-public class TestActivityWithMessenger extends Activity{
+import samsung.com.memoryleaktestapplication.service.BackgroundService;
+import samsung.com.memoryleaktestapplication.R;
+public class HandlerTestActivityWithMessenger extends Activity{
 
     private static final String TAG = "TestActivityWithMsg";
 
     @BindView(R.id.startService)
     Button startService;
-
 
 //    private final Messenger mBoundServiceMessenger = new Messenger(
 //            new ActivityHandler(this));

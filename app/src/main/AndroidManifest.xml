@@ -10,20 +10,26 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name=".TestApplication">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".TestActivity">
+        <activity android:name=".activity.HandlerTestActivity">
         </activity>
 
-        <activity android:name=".TestActivityWithMessenger">
+        <activity android:name=".activity.HandlerTestActivityWithMessenger">
         </activity>
 
-        <service android:name=".BackgroundService"
+        <activity android:name=".activity.ThreadTestActivity">
+        </activity>
+
+        <activity android:name=".activity.ExecutorServiceTestActivity">
+        </activity>
+
+        <service android:name=".service.BackgroundService"
             android:enabled="true"
             android:exported="false"
             android:process=":BackgroundService"

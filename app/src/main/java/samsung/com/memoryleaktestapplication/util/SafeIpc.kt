@@ -1,4 +1,4 @@
-package samsung.com.memoryleaktestapplication
+package samsung.com.memoryleaktestapplication.util
 
 import android.os.Handler
 import android.os.Message
@@ -76,7 +76,8 @@ class DefaultClearableManager : ClearableManager {
     }
 
     override fun track(callback: Handler.Callback): ClearableHandlerCallback {
-        return trackInternal(ClearableHandlerCallback(callback))
+        return trackInternal(ClearableHandlerCallback(
+                callback))
     }
 
     override fun track(callback: Runnable): ClearableRunnable {
@@ -101,14 +102,16 @@ class DefaultClearableManager : ClearableManager {
 
 class ClearableHandlerCallback(
     callback: Handler.Callback
-) : ValueClearable<Handler.Callback> by DefaultValueClearable(callback),
+) : ValueClearable<Handler.Callback> by DefaultValueClearable(
+        callback),
         Handler.Callback {
     override fun handleMessage(msg: Message) = value?.handleMessage(msg) == true
 }
 
 class ClearableRunnable(
     callback: Runnable
-): ValueClearable<Runnable> by DefaultValueClearable(callback),
+): ValueClearable<Runnable> by DefaultValueClearable(
+        callback),
         Runnable {
     override fun run() {
         Log.d("MemoryTestActivity", "ClearableRunnable run")
@@ -118,7 +121,8 @@ class ClearableRunnable(
 
 class ClearableTimerTask(
     clearable: TimerTask
-) : ValueClearable<TimerTask> by DefaultValueClearable(clearable),
+) : ValueClearable<TimerTask> by DefaultValueClearable(
+        clearable),
         TimerTask() {
     override fun run() {
         value?.run()

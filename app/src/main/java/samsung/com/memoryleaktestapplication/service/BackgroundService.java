@@ -1,4 +1,4 @@
-package samsung.com.memoryleaktestapplication;
+package samsung.com.memoryleaktestapplication.service;
 
 import android.app.Service;
 import android.content.Intent;
@@ -6,7 +6,6 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.Toast;
 public class BackgroundService extends Service {

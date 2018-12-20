@@ -1,4 +1,4 @@
-package samsung.com.memoryleaktestapplication;
+package samsung.com.memoryleaktestapplication.util;
 
 import android.os.Handler;
 import android.os.Looper;

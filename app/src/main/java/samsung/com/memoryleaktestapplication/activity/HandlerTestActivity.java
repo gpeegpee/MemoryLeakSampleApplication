@@ -1,4 +1,4 @@
-package samsung.com.memoryleaktestapplication;
+package samsung.com.memoryleaktestapplication.activity;
 
 import android.accounts.AccountManager;
 import android.app.ActivityManager;
@@ -64,8 +64,10 @@ import javax.net.ssl.TrustManager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import samsung.com.memoryleaktestapplication.R;
+import samsung.com.memoryleaktestapplication.TestConstant;
 
-public final class TestActivity extends AppCompatActivity {
+public final class HandlerTestActivity extends AppCompatActivity {
 
     private static final String TAG = "MemoryTestActivity";
 
@@ -94,16 +96,16 @@ public final class TestActivity extends AppCompatActivity {
 //    private WeakRefHandler handler = new WeakRefHandler(this);
 ////
 //    private static class WeakRefHandler extends Handler {
-//        WeakReference<TestActivity> mWeakReference;
+//        WeakReference<HandlerTestActivity> mWeakReference;
 //
-//        WeakRefHandler(TestActivity reference) {
-//            mWeakReference = new WeakReference<TestActivity>(reference);
+//        WeakRefHandler(HandlerTestActivity reference) {
+//            mWeakReference = new WeakReference<HandlerTestActivity>(reference);
 //        }
 //
 //        @Override
 //        public void handleMessage(Message msg) {
 //            super.handleMessage(msg);
-//            TestActivity ref = mWeakReference.get();
+//            HandlerTestActivity ref = mWeakReference.get();
 //            if (ref != null) {
 //                Log.d(TAG, "In Handler, Activity is not null");
 ////                ref.accesslog();
@@ -113,16 +115,16 @@ public final class TestActivity extends AppCompatActivity {
 //
 //    private static class WeakRunnable implements Runnable {
 //
-//        WeakReference<TestActivity> mWeakReference;
+//        WeakReference<HandlerTestActivity> mWeakReference;
 //
-//        WeakRunnable(TestActivity reference) {
-//            mWeakReference = new WeakReference<TestActivity>(reference);
+//        WeakRunnable(HandlerTestActivity reference) {
+//            mWeakReference = new WeakReference<HandlerTestActivity>(reference);
 //        }
 //
 //        @Override
 //        public void run() {
 //            Log.d(TAG, "in Runnable");
-//            TestActivity ref = mWeakReference.get();
+//            HandlerTestActivity ref = mWeakReference.get();
 //            if (ref != null) {
 //                Log.d(TAG, "In Runnable, Activity is not null");
 //            }
